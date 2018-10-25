@@ -20,6 +20,8 @@ extension UIDevice {
         case iPhone6SPlus = "iPhone 6S Plus"
         case iPhone7 = "iPhone 7"
         case iPhone7Plus = "iPhone 7 Plus"
+        case iPhone8 = "iPhone 8"
+        case iPhone8Plus = "iPhone 8 Plus"
         case iPhoneX = "iPhone X"
         case iPhoneXs = "iPhone Xs"
         case iPhoneXsMax = "iPhone Xs Max"
@@ -40,6 +42,10 @@ extension UIDevice {
                 return .iPhoneXs
             case "iPhone10,3", "iPhone10,6":
                 return .iPhoneX
+            case "iPhone10,1", "iPhone10,4":
+                return .iPhone8
+            case "iPhone10,2", "iPhone10,5":
+                return .iPhone8Plus
             case "iPhone9,2", "iPhone9,4":
                 return .iPhone7Plus
             case "iPhone9,1", "iPhone9,3":
@@ -66,6 +72,8 @@ extension UIDevice {
         get {
             return platform == .iPhone7
                 || platform == .iPhone7Plus
+                || platform == .iPhone8
+                || platform == .iPhone8Plus
                 || platform == .iPhoneX
                 || platform == .iPhoneXs
                 || platform == .iPhoneXsMax
